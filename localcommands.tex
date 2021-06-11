@@ -1,0 +1,90 @@
+\hypersetup{
+    colorlinks=true,
+    linkcolor=magenta,
+    filecolor=magenta,      
+} %% NB: This is an attempt to get \hyperlink{thesentence}{any sentence} to display in the same pink as \url{}
+
+
+
+\newcommand{\orcid}[1]{}
+\renewcommand{\lsChapterFooterSize}{\footnotesize}
+
+% \newauthor[SH]{Simon}{pink}   % \cmtSH{}  \cmtSH[inline]{}
+% \newauthor[NT]{Nina}{yellow}  % \cmtNT{}   \cmtNT[inline]{}
+% \newauthor[LB]{Lars}{orange}  % \cmtLB{} \cmtLB[inline]{}
+% \newauthor[AJ]{Adam}{blue}  % \cmtAJ{}  \cmtAJ[inline]{}
+% \newauthor[YX]{Yang}{green}  % \cmtYX{}  \cmtYX[inline]{}
+
+\tikzset{
+    between/.style args={#1 and #2}{
+         at = ($(#1)!0.5!(#2)$)
+    }
+}
+
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+%%% TAHMASEBI
+
+%\newcommand\eg{{e.g.,\ }}
+\newcommand\Eg{{E.g.,\ }}
+
+%%%% DUAN
+
+% \usepackage{graphicx}
+\newcommand{\etal}{{et al}. }
+\newcommand{\ie}{{i}.{e}.}
+\newcommand{\eg}{{e}.{g}.}
+% \newcommand\commentA[1]{\textcolor{blue}{#1}}
+% \newcommand\commentR[1]{\textcolor{red}{#1}}
+\SetKwComment{Comment}{$\triangleright$}{}
+
+%%% VYLOMOVA
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.85pt] (char) {#1};}}
+            
+\DeclareNewSectionCommand
+  [
+    counterwithin = chapter,
+    afterskip = 2.3ex plus .2ex,
+    beforeskip = -3.5ex plus -1ex minus -.2ex,
+    indent = 0pt,
+    font = \usekomafont{section},
+    level = 1,
+    tocindent = 1.5em,
+    toclevel = 1,
+    tocnumwidth = 2.3em,
+    tocstyle = section,
+    style = section
+  ]
+  {appendixsection}
+
+\renewcommand*\theappendixsection{\Alph{appendixsection}}
+\renewcommand*{\appendixsectionformat}{\appendixname~\theappendixsection\autodot\enskip}
+\renewcommand*{\appendixsectionmarkformat}{\appendixname~\theappendixsection\autodot\enskip}
+
+\crefname{appendixsection}{Appendix}{Appendices}
+\Crefname{appendixsection}{Appendix}{Appendices}
+
+\DeclareNewSectionCommand
+  [
+    counterwithin = appendixsection,
+    beforeskip=-10pt,
+    afterskip=1sp,
+    indent = 0pt,
+    font = \usekomafont{subsection},
+    level = 2,
+    tocindent = 3.8em,
+    toclevel = 2,
+    tocnumwidth = 3.2em,
+    tocstyle = section,
+    style = section
+  ]
+  {appendixsubsection}
+
+\crefname{appendixsubsection}{Appendix}{Appendices}
+\Crefname{appendixsubsection}{Appendix}{Appendices}
+
+
+\newfontfamily\cjkfont
+  [Scale=MatchLowercase,BoldFont=SourceHanSerif-Bold.otf]{SourceHanSerif-Regular.otf}
+\AdditionalFontImprint{Source Han Serif}

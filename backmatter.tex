@@ -1,0 +1,9 @@
+% There is normally no need to change the backmatter section. 
+% The most relevant files are main.tex and the files in the folder chapters/
+\backmatter
+\phantomsection%this allows hyperlink in ToC to work 
+\addcontentsline{toc}{chapter}{\lsIndexTitle}
+\addcontentsline{toc}{section}{\lsNameIndexTitle}
+\ohead{\lsNameIndexTitle}
+\printindex
+\cleardoublepage

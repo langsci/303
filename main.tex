@@ -1,0 +1,58 @@
+\documentclass[output=book,collection, multiauthors
+%             ,colorlinks, citecolor=brown
+%             ,draft
+%             ,draftmode
+		  ]{langscibook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\input{localcommands.tex}
+\addbibresource{localbibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Frontmatter                      %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\frontmatter
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+{\sloppy\tableofcontents}
+
+% \include{chapters/preface}
+% \include{chapters/acknowledgments}
+
+
+\mainmatter
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Chapters                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includepaper{chapters/01} % Survey paper
+% 
+% %%%%%%%%%% application fields
+\includepaper{chapters/04} %% The semantic broadening of harm-related concepts in psychology
+\includepaper{chapters/05} %% Understanding the evolution of circular economy through language change
+\includepaper{chapters/x} %% Semantic change in Swedish --- from a lexicographic perspective
+% 
+% %%%%%%%%%%% methods for and studies of semantic change
+\includepaper{chapters/03} %% Chronological changes in semantic weights of sub-word units  %% SH: check if Chinese character is displaying correctly
+\includepaper{chapters/06} %% Chaining Algorithms and Historical Adjective Extension
+\includepaper{chapters/07} %% Cross-lingual laws of semantic change
+\includepaper{chapters/08} %% Diachronic linguistic periodization of document collections for discovering evolutionary word semantics
+\includepaper{chapters/09} %% Lexical Semantic Change for Ancient Greek and Latin
+% 
+% % 
+% %%%%%%%%%% application
+\includepaper{chapters/10} %% Computational approaches to semantic change: Applications. %this chapter before the final chapter that we are writing (Simon, Dominik, Nina & Haim)
+\includepaper{chapters/11} %% Current and future challenges for lexical semantic change detection
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Backmatter                       %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% There is normally no need to change the backmatter section
+\input{backmatter.tex}
+\end{document}
