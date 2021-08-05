@@ -1,4 +1,5 @@
 \documentclass[output=paper]{langsci/langscibook} 
+\ChapterDOI{10.5281/zenodo.5040316}
 \author{Yijun Duan\affiliation{National Institute of Advanced Industrial Science and Technology} and Adam Jatowt\affiliation{University of Innsbruck}
 and  Masatoshi Yoshikawa\affiliation{Kyoto University}}
 \title[Document collection representation by diachronic linguistic periodization]
@@ -39,7 +40,7 @@ In other words, a word is represented by a constant vector within one period, wh
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1.0\textwidth,height=1.0\textheight,keepaspectratio]{figures/DUAN_overall}
+\includegraphics[width=1.0\textwidth]{figures/DUAN_overall.png}
 \caption{Conceptual view of our task. Our goal is to identify latent periods in the input document collection, such that word semantics are relatively stable within the same period (i.e., a word is represented by the same embedding vector), and major linguistic shifts exist between different periods (i.e., a word may be represented by fairly different vectors in different periods).}\label{overall}
 \end{figure}
 
@@ -137,7 +138,7 @@ where the key smoothing term $\left \| A_{i}^{SFT} -  A_{j}^{SFT}\right \|_{F}^{
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{figures/DUAN_MF}
+\includegraphics[width=0.9\textwidth]{figures/DUAN_mf.png}
 \caption{Illustration of our joint matrix factorization model. Shared frequent terms in all time frames ($t_{1}, t_{2}, ..., t_{N}$) are aligned to similar positions, which places word embeddings across time in the same latent semantic space.}\label{MF}
 \end{figure}
 
